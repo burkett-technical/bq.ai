@@ -23,7 +23,7 @@
 
     .hero {
       height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
         url('https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
       color: white;
       display: flex;
@@ -32,11 +32,6 @@
       flex-direction: column;
       text-align: center;
       position: relative;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
     }
 
     .parallax {
@@ -102,8 +97,8 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav me-3">
           <li class="nav-item"><a class="nav-link" href="#hero" data-en="Home" data-es="Inicio">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about" data-en="About" data-es="Sobre Nosotros">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#quote" data-en="Get Quote" data-es="Obtener Cotización">Get Quote</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about" data-en="About" data-es="Cómo Funciona">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#quote" data-en="Sign Up" data-es="Regístrate">Sign Up</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
         </ul>
         <div class="lang-toggle" id="langToggle">
@@ -117,11 +112,14 @@
   <!-- Hero Section -->
   <section id="hero" class="hero">
     <div class="hero-content">
-      <h1 class="display-3 fw-bold" data-en="Instant Service Quotes, Simplified" data-es="Cotizaciones Instantáneas, Simplificadas">Instant Service Quotes, Simplified</h1>
-      <p class="lead mt-3 mb-4" data-en="From plumbing to construction — BizQuote connects you with trusted local pros fast." data-es="Desde plomería hasta construcción — BizQuote te conecta rápidamente con profesionales locales de confianza.">
+      <h1 class="display-3 fw-bold" data-en="Instant Service Quotes, Simplified" data-es="Cotizaciones de Servicio Instantáneas, Simplificadas">
+        Instant Service Quotes, Simplified
+      </h1>
+      <p class="lead mt-3 mb-4" data-en="From plumbing to construction — BizQuote connects you with trusted local pros fast."
+         data-es="Desde plomería hasta construcción — BizQuote te conecta rápidamente con profesionales locales de confianza.">
         From plumbing to construction — BizQuote connects you with trusted local pros fast.
       </p>
-      <a href="#quote" class="btn btn-primary btn-lg" data-en="Get a Quote" data-es="Obtener Cotización">Get a Quote</a>
+      <a href="#quote" class="btn btn-primary btn-lg" data-en="Get Early Access" data-es="Obtén Acceso Anticipado">Get Early Access</a>
     </div>
   </section>
 
@@ -129,7 +127,8 @@
   <section id="about" class="parallax" style="background-image:url('https://images.unsplash.com/photo-1519944518895-f08a12d6dfd5?auto=format&fit=crop&w=1600&q=80');">
     <div class="parallax-content container">
       <h2 class="display-5 fw-bold mb-3" data-en="How It Works" data-es="Cómo Funciona">How It Works</h2>
-      <p class="lead" data-en="Submit your job details and photo, receive a quote, and schedule the work — all in one place." data-es="Envía los detalles y una foto de tu trabajo, recibe una cotización y programa el servicio — todo en un solo lugar.">
+      <p class="lead" data-en="Submit your job details and photo, receive a quote, and schedule the work — all in one place."
+         data-es="Envía los detalles y una foto de tu trabajo, recibe una cotización y programa el servicio — todo en un solo lugar.">
         Submit your job details and photo, receive a quote, and schedule the work — all in one place.
       </p>
     </div>
@@ -139,43 +138,18 @@
   <section id="quote">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="fw-bold" data-en="Request a Quote" data-es="Solicitar Cotización">Request a Quote</h2>
-        <p class="text-muted" data-en="Tell us about your job and we’ll connect you with the best local pros." data-es="Cuéntanos sobre tu trabajo y te conectaremos con los mejores profesionales locales.">
-          Tell us about your job and we’ll connect you with the best local pros.
+        <h2 class="fw-bold" data-en="Sign Up for Our Beta Launch" data-es="Regístrate para Nuestro Lanzamiento Beta">Sign Up for Our Beta Launch</h2>
+        <p class="text-muted" data-en="Give us your name and contact information and we’ll notify you when the app launches."
+           data-es="Proporciónanos tu nombre e información de contacto y te avisaremos cuando la aplicación se lance.">
+          Give us your name and contact information and we’ll notify you when the app launches.
         </p>
       </div>
-      <form class="row g-4">
-        <div class="col-md-6">
-          <label class="form-label" data-en="Full Name" data-es="Nombre Completo">Full Name</label>
-          <input type="text" class="form-control" data-en-placeholder="Your name" data-es-placeholder="Tu nombre" placeholder="Your name" required>
-        </div>
-        <div class="col-md-6">
-          <label class="form-label" data-en="Email" data-es="Correo Electrónico">Email</label>
-          <input type="email" class="form-control" data-en-placeholder="Your email" data-es-placeholder="Tu correo electrónico" placeholder="Your email" required>
-        </div>
-        <div class="col-md-6">
-          <label class="form-label" data-en="Service Type" data-es="Tipo de Servicio">Service Type</label>
-          <select class="form-select" id="serviceSelect" required>
-            <option value="">Choose...</option>
-            <option data-en="Plumbing" data-es="Plomería">Plumbing</option>
-            <option data-en="Electrical" data-es="Electricidad">Electrical</option>
-            <option data-en="Construction" data-es="Construcción">Construction</option>
-            <option data-en="HVAC" data-es="Climatización">HVAC</option>
-            <option data-en="Landscaping" data-es="Jardinería">Landscaping</option>
-          </select>
-        </div>
-        <div class="col-md-6">
-          <label class="form-label" data-en="Upload a Photo" data-es="Subir Foto">Upload a Photo</label>
-          <input type="file" class="form-control" accept="image/*">
-        </div>
-        <div class="col-12">
-          <label class="form-label" data-en="Brief Description" data-es="Descripción Breve">Brief Description</label>
-          <textarea class="form-control" rows="4" data-en-placeholder="Describe the issue or project" data-es-placeholder="Describe el problema o proyecto" placeholder="Describe the issue or project" required></textarea>
-        </div>
-        <div class="col-12 text-center">
-          <button type="submit" class="btn btn-primary btn-lg px-5" data-en="Submit" data-es="Enviar">Submit</button>
-        </div>
-      </form>
+
+      <div class="d-flex justify-content-center">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfNv_zkxj9bFgHnKrhx07Lu5Jk249E1BSYk6-vcBGvqCVEuBA/viewform?embedded=true"
+                width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0"
+                style="max-width:800px; background:white;">Loading…</iframe>
+      </div>
     </div>
   </section>
 
@@ -183,7 +157,8 @@
   <section id="contact" class="parallax" style="background-image:url('https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1600&q=80');">
     <div class="parallax-content">
       <h2 class="fw-bold" data-en="We’re Here to Help" data-es="Estamos Aquí para Ayudarte">We’re Here to Help</h2>
-      <p class="lead" data-en="Email: support@bizquote.ai | Phone: (800) 555-1234" data-es="Correo: support@bizquote.ai | Teléfono: (800) 555-1234">
+      <p class="lead" data-en="Email: support@bizquote.ai | Phone: (800) 555-1234"
+         data-es="Correo: support@bizquote.ai | Teléfono: (800) 555-1234">
         Email: support@bizquote.ai | Phone: (800) 555-1234
       </p>
       <a href="#quote" class="btn btn-outline-light mt-3" data-en="Request a Quote" data-es="Solicitar Cotización">Request a Quote</a>
@@ -218,18 +193,7 @@
       document.querySelectorAll('[data-en]').forEach(el => {
         el.textContent = el.getAttribute(`data-${currentLang}`);
       });
-
-      // Update placeholders too
-      document.querySelectorAll('[data-en-placeholder]').forEach(el => {
-        el.placeholder = el.getAttribute(`data-${currentLang}-placeholder`);
-      });
-
-      // Update select options
-      document.querySelectorAll('#serviceSelect option').forEach(opt => {
-        opt.textContent = opt.getAttribute(`data-${currentLang}`) || opt.textContent;
-      });
     });
   </script>
 </body>
 </html>
-
